@@ -2,6 +2,10 @@
   "name": "RNcpp",
   "version": "0.0.1",
   "private": true,
+  "description": "React Native with Cpp Turbo Native Modules",
+  "author": "Naveen Kumar (https://github.com/naviniitk)",
+  "license": "MIT",
+  "homepage": "https://github.com/naviniitk/rn-cpp",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",

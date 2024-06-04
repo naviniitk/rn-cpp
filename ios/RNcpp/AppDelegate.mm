@@ -35,8 +35,6 @@
 #endif
 }
 
-@end
-
 #pragma mark RCTTurboModuleManagerDelegate
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const std::string &)name
@@ -47,3 +45,5 @@
   }
   return nullptr;
 }
+
+@end
