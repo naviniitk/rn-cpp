@@ -3013,6 +3013,7 @@ __metadata:
     react: 18.2.0
     react-native: 0.74.1
     react-test-renderer: 18.2.0
+    tm: ^0.0.1
     typescript: 5.0.4
   languageName: unknown
   linkType: soft
@@ -9013,6 +9014,13 @@ __metadata:
     readable-stream: ~2.3.6
     xtend: ~4.0.1
   checksum: beb0f338aa2931e5660ec7bf3ad949e6d2e068c31f4737b9525e5201b824ac40cac6a337224856b56bd1ddd866334bbfb92a9f57cd6f66bc3f18d3d86fc0fe50
+  languageName: node
+  linkType: hard
+
+"tm@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "tm@npm:0.0.1"
+  checksum: ae21aab856b22f83a362d84f69a92ae463b91d8bdf46914fc0c8de9af2c8d795667657f7bb513be8c85dea6514c9cd6dd6ca11cce442ac724fb23022cf2200d5
   languageName: node
   linkType: hard
 

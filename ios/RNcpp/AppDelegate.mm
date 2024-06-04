@@ -1,6 +1,13 @@
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
+#import <React/CoreModulesPlugins.h>
+#import <ReactCommon/RCTTurboModuleManager.h>
+#import <NativeCppModule.h>
+
+@interface AppDelegate () <RCTTurboModuleManagerDelegate> {}
+@end
+
 
 @implementation AppDelegate
 
@@ -29,3 +36,14 @@
 }
 
 @end
+
+#pragma mark RCTTurboModuleManagerDelegate
+
+- (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const std::string &)name
+                                                      jsInvoker:(std::shared_ptr<facebook::react::CallInvoker>)jsInvoker
+{
+  if (name == "NativeCppModule") {
+    return std::make_shared<facebook::react::NativeCppModule>(jsInvoker);
+  }
+  return nullptr;
+}
