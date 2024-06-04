@@ -10,11 +10,21 @@
 
 namespace facebook::react {
 
+#pragma mark - Structs
+using ConstantsStruct =
+    NativeCppModuleConstantsStruct<bool, int32_t, std::string>;
+
+template <>
+struct Bridging<ConstantsStruct>
+    : NativeCppModuleConstantsStructBridging<ConstantsStruct> {};
+
 class NativeCppModule : public NativeCppModuleCxxSpec<NativeCppModule> {
  public:
   NativeCppModule(std::shared_ptr<CallInvoker> jsInvoker);
 
   std::string reverseString(jsi::Runtime& rt, std::string input);
+
+  ConstantsStruct getConstants(jsi::Runtime& rt);
 };
 
 } // namespace facebook::react
